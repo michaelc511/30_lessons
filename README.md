@@ -2,6 +2,10 @@
 
 https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0muVyhooc
 
+# Net Ninja Github Repo
+
+https://github.com/iamshaunjp/Complete-React-Tutorial
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
