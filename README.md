@@ -1,3 +1,10 @@
+# Notes
+
+# Reference
+Net Ninja Playlist of 30+ Lessons
+
+https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0muVyhooc
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
