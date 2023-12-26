@@ -10,6 +10,12 @@ const Home = () => {
   }
 
   // pass an argument. 
+  const handleClickAgain1 = (name) => {
+    console.log('hello ' + name );
+  }
+
+
+  // pass an argument. 
   const handleClickAgain = (name, e) => {
     console.log('hello ' + name, e.target);
   }
@@ -33,9 +39,11 @@ const Home = () => {
       */}
 
       <button onClick={handleClick0}>Click m0</button>
-      <button onClick={handleClick}>Click me</button>
-      <button onClick={(e) => handleClickAgain('mario', e)}>Click me again</button>
-      <button onClick={(e) => handleClickAgain2(e, 'mario')}>Click me again</button>
+      <button onClick={handleClick}>Click me w event</button>
+      <button onClick={(e) => handleClickAgain1('mario')}>Click me w no event arg</button>
+
+      <button onClick={(e) => handleClickAgain('mario', e)}>Click me again w event arg</button>
+      <button onClick={(e) => handleClickAgain2(e, 'mario')}>Click me again w event arg</button>
 
     </div>
   );
