@@ -1,49 +1,33 @@
+import { useState } from 'react';
+
 const Home = () => {
 
-  const handleClick0 = () => {
-    console.log('hello ninjas');
+  let firstName = 'mario';
+  // Does not change 'firstName' in web template but in console.log
+  // React is not reactive 'name' to rerender it on the web
+  const handleClick = () => {
+    firstName = 'luigi'
+    console.log(firstName);
   }
 
+  // Need to use hook 'useState' to have React track it
+  const [name, setName] = useState('mario')
+  const [age, setAge] = useState(25);
 
-  const handleClick = (e) => {
-    console.log('hello ninjas', e);
-  }
-
-  // pass an argument. 
-  const handleClickAgain1 = (name) => {
-    console.log('hello ' + name );
-  }
-
-
-  // pass an argument. 
-  const handleClickAgain = (name, e) => {
-    console.log('hello ' + name, e.target);
-  }
-
-  // pass an argument w event in 1st arg
-  const handleClickAgain2 = (e, name) => {
-    console.log('hello ' + name, e.target);
+  const handleClick1 = () => {
+    setName('luigi');
+    setAge(30);
   }
 
   return (
     <div className="home">
       <h2>Homepage</h2>
+      <p>{name} is {age} years old </p>
+      <button onClick={handleClick}>Click me will not work</button>
+      <p>       
+        <button onClick={handleClick1}>Click me will work using 'useState' hook</button>
+      </p>
 
-      {/* Passing in a reference to the function 
-          Do not run it with functionName()
-          
-          Event 'e' is optional if no parameters
-
-          For passing in an argument, need to wrap it in an
-          anonymous function
-      */}
-
-      <button onClick={handleClick0}>Click m0</button>
-      <button onClick={handleClick}>Click me w event</button>
-      <button onClick={(e) => handleClickAgain1('mario')}>Click me w no event arg</button>
-
-      <button onClick={(e) => handleClickAgain('mario', e)}>Click me again w event arg</button>
-      <button onClick={(e) => handleClickAgain2(e, 'mario')}>Click me again w event arg</button>
 
     </div>
   );
