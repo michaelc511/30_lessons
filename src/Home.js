@@ -10,16 +10,17 @@ const Home = () => {
   ])
 
   /*
-   11. Props
-    Lets create an external comp to contain the blogs
-  */
+   12. Reuse components
+    Use the filter() to reuse the 'BlogList' comp w a different array of items. 
+   */
 
-  return (
-    <div className="home">
-      {/* 1. We have the 'BlogList' comp and pass in 'blogs' as the props */}
-      <BlogList blogs={blogs} title = "All Blogs" />
-    </div>
-  );
+    return (
+      <div className="home">
+        {/* 1. We have the 'BlogList' comp and pass in 'blogs' as the props */}
+        <BlogList blogs={blogs} title="All Blogs" />
+        <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs" />
+      </div>
+    );
 }
 
 export default Home;
