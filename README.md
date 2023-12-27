@@ -1,10 +1,4 @@
-# Net Ninja Playlist of 30+ Lessons
 
-https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0muVyhooc
-
-# Net Ninja Github Repo
-
-https://github.com/iamshaunjp/Complete-React-Tutorial
 
 # Lesson 9 React Tools
 
