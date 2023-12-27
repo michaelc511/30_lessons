@@ -10,7 +10,7 @@ const Home = () => {
   ])
 
   /*
-   12. Reuse components
+   13. Functions as properties 
     Use the filter() to reuse the 'BlogList' comp w a different array of items. 
    */
 
