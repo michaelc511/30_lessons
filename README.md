@@ -6,6 +6,17 @@ https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0
 
 https://github.com/iamshaunjp/Complete-React-Tutorial
 
+# Lesson 9 React Tools
+
+Components - Inspect and choose components. 
+  Select the eye to inspect the element DOM.
+  Select the bug icon to log all the app component in the 'console'.
+  Select the '<>' to view the source file
+
+Click on a component with a state, we see 'hooks' for the state of values
+
+Click on the '<>' and go to console, we can see the hooks and the state w the id, isStateEditable.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
