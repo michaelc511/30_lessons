@@ -11,16 +11,23 @@ const Home = () => {
 
   /*
    13. Functions as properties 
-    Use the filter() to reuse the 'BlogList' comp w a different array of items. 
+    We want to delete the 'blogs' array with a 'handleDelete' methods
    */
 
-    return (
-      <div className="home">
-        {/* 1. We have the 'BlogList' comp and pass in 'blogs' as the props */}
-        <BlogList blogs={blogs} title="All Blogs" />
-        <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs" />
-      </div>
-    );
+  const handleDelete = (id) => {
+    // create a temp array to hold the filter. The old array does not change. 
+    const newBlogs = blogs.filter(blog => blog.id !== id);
+
+    // now use the temp array to store the 'blogs' array in state
+    setBlogs(newBlogs);
+  }
+
+  return (
+    <div className="home">
+      {/* 1. We have the 'BlogList' comp and pass in 'blogs' as the props */}
+      <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+    </div>
+  );
 }
 
 export default Home;

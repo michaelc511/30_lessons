@@ -1,34 +1,20 @@
-// 2. using 'props'
-const BlogList = (props) => {
-  const blogs = props.blog;
-  const title = props.title;
+
+// Use destructure to use 'blogs
+const BlogList = ({ blogs, title, handleDelete }) => {
+
   return (
     <div className="blog-list">
       <h2>{title}</h2>
-      {props.blogs.map((blog) => (
+      {blogs.map((blog) => (
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author} </p>
+          <button onClick={()=> handleDelete(blog.id)}>Delete Blog</button>
         </div>
       ))}
     </div>
   );
 }
-
-// 2a alt. Use destructure to use 'blogs
-// const BlogList = ({ blogs, title }) => {
-//   return (
-//     <div className="blog-list">
-//       <h2>{title}</h2>
-//       {blogs.map((blog) => (
-//         <div className="blog-preview" key={blog.id}>
-//           <h2>{blog.title}</h2>
-//           <p>Written by {blog.author} </p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
 
 
 export default BlogList;
