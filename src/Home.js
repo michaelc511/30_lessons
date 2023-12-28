@@ -17,25 +17,14 @@ const Home = () => {
   }
 
   // useEffect - pass a function as an argument to run everytime we render and rerender  
-  // dependency array - pass 2nd argument as an empty array. That means it will only run 1x and will not rerender if state changes
-  // useEffect(()=> {
-  //   console.log('use effect run'); 
-  //   console.log(blogs); 
-  // }, []);
-  
-  // useEffect with array of state 'name'.
-  // now useEffect will watch for the state 'name'.
-  // This will work if 'name' is changed. Will NOT re-render if 'blogs' are changed
-  useEffect(()=> {
-    console.log('use effect run');  
-    console.log(name);
-  }, [name]);
-
+   useEffect(()=> {
+    console.log('use effect run'); 
+    console.log(blogs); 
+  }, []);
+   
   return (
     <div className="home">
       <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-      <button onClick={()=> setName('luigi')}>change name</button>
-      <p>{name}</p>
     </div>
   );
 }

@@ -11,6 +11,19 @@ Click on a component with a state, we see 'hooks' for the state of values
 
 Click on the '<>' and go to console, we can see the hooks and the state w the id, isStateEditable.
 
+# Lesson 16 
+
+Install JSON server
+
+npx json-server --watch data/db.json --port 8000
+
+use 'http://localhost:8000/blogs' as the endpoints 
+
+/blogs        GET  Fetch all blogs
+/blogs/{id}   GET Fetch a single blog
+/blogs        POST  Add a single blog
+/blogs/{id}   DELETE  Delete a blog
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
