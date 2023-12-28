@@ -6,8 +6,6 @@ const Home = () => {
   // an array of blogs for our state
   const [blogs, setBlogs] = useState(null);
 
-  const [name, setName] = useState('mario');
-
   // useEffect - pass a function as an argument to run everytime we render and rerender  
   // 2. fetch from our JSON server using .then for the response and a .then for the data
   useEffect(() => {
@@ -17,8 +15,8 @@ const Home = () => {
         return res.json();
       })
       .then((data)=>{
-        console.log(data)
-        setBlogs(data)
+        console.log(data);
+        setBlogs(data);
       });
   }, []);
 
