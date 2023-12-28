@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
@@ -9,22 +9,22 @@ const Home = () => {
     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
   ])
 
-  /*
-   13. Functions as properties 
-    We want to delete the 'blogs' array with a 'handleDelete' methods
-   */
-
   const handleDelete = (id) => {
-    // create a temp array to hold the filter. The old array does not change. 
-    const newBlogs = blogs.filter(blog => blog.id !== id);
-
-    // now use the temp array to store the 'blogs' array in state
+    const newBlogs = blogs.filter(blog => blog.id !== id); 
     setBlogs(newBlogs);
   }
 
+  // useEffect - pass a function as an argument to run everytime we render and rerender 
+  // great for use to fetching data 
+  useEffect(()=> {
+    console.log('use effect run');
+    // show the state of arrays, don't change the state in useEffect or else it will keep on running.
+    // if a state change, it will rerender and update the state and ....
+    console.log(blogs); 
+  });
+
   return (
     <div className="home">
-      {/* 1. We have the 'BlogList' comp and pass in 'blogs' as the props */}
       <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
     </div>
   );
