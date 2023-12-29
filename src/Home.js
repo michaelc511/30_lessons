@@ -3,7 +3,6 @@ import BlogList from './BlogList';
 import useFetch from './useFetch';
 
 const Home = () => {
-  // 8 useFeatch here with the URL, to use 'blogs' use it as 'data: blogs' 
   const {data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
   return (
