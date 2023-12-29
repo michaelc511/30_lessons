@@ -24,6 +24,16 @@ use 'http://localhost:8000/blogs' as the endpoints
 /blogs        POST  Add a single blog
 /blogs/{id}   DELETE  Delete a blog
 
+# Lesson 20 - Custom hook
+
+  1. Create useFetch.js in 'src' folder and 
+  2. cut and paste all the useEffect code from 'Home' to it.
+  3. cut and paste all the state variables
+  4. Import them in 'useFetch.js' 
+  5. Export useFetch.js
+  6. Change 'blogs' to 'data' in the code and review all the instructions in Home.js and useFetch.js
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
