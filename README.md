@@ -17,12 +17,12 @@ Install JSON server
 
 npx json-server --watch data/db.json --port 8000
 
-use 'http://localhost:8000/blogs' as the endpoints 
+  use 'http://localhost:8000/blogs' as the endpoints 
 
-/blogs        GET  Fetch all blogs
-/blogs/{id}   GET Fetch a single blog
-/blogs        POST  Add a single blog
-/blogs/{id}   DELETE  Delete a blog
+  /blogs        GET  Fetch all blogs
+  /blogs/{id}   GET Fetch a single blog
+  /blogs        POST  Add a single blog
+  /blogs/{id}   DELETE  Delete a blog
 
 # Getting Started with Create React App
 
