@@ -26,6 +26,7 @@ use 'http://localhost:8000/blogs' as the endpoints
 
 # Lesson 22 - React Router
 
+ 1. Install the React Router 'npm install react-router-dom@5'
 
 # Getting Started with Create React App
 
