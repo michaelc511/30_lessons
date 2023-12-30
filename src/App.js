@@ -1,24 +1,26 @@
 import NavBar from './Navbar';
-import Home from './Home';
-// 1 import
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home'; 
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Create from './Create';
+  
 function App() {
   const title = 'Welcome to the new blog'
   const likes = 50
   const person = { name: 'Yoshi', age: 30 }
   const link = 'http://www.google.com'
-  return (
-    // 2 add the Router to contain everything
+  return ( 
     <Router>
       <div className='App'>
         <NavBar></NavBar>
-        <div className="content">
-          // 3 add the switch
-          <Switch>
-            // 4 add the route to home page
-            <Route path="/">
+        <div className="content"> 
+          <Switch> 
+            // 2 add it here and use 'exact' to match it for '/'
+            <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/create"> 
+              <Create />
             </Route>
           </Switch>
         </div>
