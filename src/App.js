@@ -22,7 +22,6 @@ function App() {
             <Route path="/create">
               <Create />
             </Route>           
-            {/* 2. Path to blog id */}
             <Route path="/blog/:id">
               <BlogDetails/>
             </Route>

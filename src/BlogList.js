@@ -1,7 +1,5 @@
-//2 import it
 import { Link } from "react-router-dom";
 
-// Use destructure to use 'blogs
 const BlogList = ({ blogs, title }) => {
 
   return (

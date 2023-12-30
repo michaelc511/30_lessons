@@ -1,14 +1,25 @@
-// 2 import
 import { useParams } from "react-router-dom";
+import useFetch from './useFetch';
 
 const BlogDetails = () => {
-  // 3 deconstruct the id from 'useParams'
-  const {id } = useParams();
-  return ( 
+  const { id } = useParams();
+  // 1. useFetch
+  const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+
+  return (
     <div className="blog-details">
-      <h2>Blog details {id} </h2>
+      {/* 2. Conditional template */}
+      {isPending && <div>Loading...</div>}
+      {error && <div>{error}</div>}
+      {blog &&
+        <article>
+          <h2>{blog.title} </h2>
+          <p>Writtey by {blog.author}</p>
+          <div>{blog.body}</div>
+        </article>
+      }
     </div>
-   );
+  );
 }
- 
+
 export default BlogDetails;
