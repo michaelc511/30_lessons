@@ -25,7 +25,8 @@ const Home = () => {
   
   // useEffect with array of state 'name'.
   // now useEffect will watch for the state 'name'.
-  // This will work if 'name' is changed. Will NOT re-render if 'blogs' are changed
+  // The useEffect will run 1st time and rerender only if 'name' is changed.
+  // Will NOT run 'useEffect' if 'blogs' are changed
   useEffect(()=> {
     console.log('use effect run');  
     console.log(name);
