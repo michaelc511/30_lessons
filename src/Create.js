@@ -1,11 +1,14 @@
 import { useState } from 'react';
+// 1. import useHistory
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
   const [title, setTitle] = useState('Enter the title');
   const [body, setBody] = useState('Enter the body');
   const [author, setAuthor] = useState('mario');
-  // 2 add state for loading
   const [ isPending, setIsPending ] = useState(false);
+  // 2. create an instanct
+  const history = useHistory();
  
   const handleSubmit = (e) => { 
     e.preventDefault(); 
@@ -14,21 +17,21 @@ const Create = () => {
        body,
        author
     }
-
-    // 3. set isPending to be true when fetching it 
+ 
     setIsPending(true);
-
-    // 1. fetch request in this one for POST w url and object for post 
-    // method, headers and body to use 'JSON.stringify(blog)'
+ 
     fetch('http://localhost:8000/blogs', {
       method: 'POST',
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(blog)
     })
     .then(()=> {
-      console.log('new blog added');
-      // 4. set isPending to false once done
+      console.log('new blog added'); 
       setIsPending(false);
+      // go back to previous page. 
+      // history.go(-1);
+      // 3. go to home page
+      history.push('/');
     })
   }
 
