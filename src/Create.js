@@ -4,19 +4,32 @@ const Create = () => {
   const [title, setTitle] = useState('Enter the title');
   const [body, setBody] = useState('Enter the body');
   const [author, setAuthor] = useState('mario');
-
-  // 1. event for submit
-  const handleSubmit = (e) => {
-    // 2. prevent refresh of the page 
-    e.preventDefault();
-    // 3. Create an object for the blog w the state properties
+  // 2 add state for loading
+  const [ isPending, setIsPending ] = useState(false);
+ 
+  const handleSubmit = (e) => { 
+    e.preventDefault(); 
     const blog = {
       title,
        body,
        author
     }
 
-    console.log(blog);
+    // 3. set isPending to be true when fetching it 
+    setIsPending(true);
+
+    // 1. fetch request in this one for POST w url and object for post 
+    // method, headers and body to use 'JSON.stringify(blog)'
+    fetch('http://localhost:8000/blogs', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json"},
+      body: JSON.stringify(blog)
+    })
+    .then(()=> {
+      console.log('new blog added');
+      // 4. set isPending to false once done
+      setIsPending(false);
+    })
   }
 
   return (
@@ -43,8 +56,10 @@ const Create = () => {
           <option value="mario">mario</option>
           <option value="yoshi">yoshi</option>
         </select>
-        <button>Add Blog</button>
-
+        {/* 5. Have conditional templating for not pending and pending to disable it */}
+        {!isPending && <button>Add Blog</button> }
+        {isPending && <button disabled>Adding Blog...</button>}
+        
       </form>
     </div>
   );
