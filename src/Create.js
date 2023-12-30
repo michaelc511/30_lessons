@@ -1,4 +1,3 @@
-// 1. make this functional component
 const Create = () => {
   return ( 
     <div className="create">

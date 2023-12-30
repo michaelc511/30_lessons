@@ -1,25 +1,24 @@
 import NavBar from './Navbar';
-import Home from './Home'; 
+import Home from './Home';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
-  
+
 function App() {
   const title = 'Welcome to the new blog'
   const likes = 50
   const person = { name: 'Yoshi', age: 30 }
   const link = 'http://www.google.com'
-  return ( 
+  return (
     <Router>
       <div className='App'>
         <NavBar></NavBar>
-        <div className="content"> 
-          <Switch> 
-            // 2 add it here and use 'exact' to match it for '/'
+        <div className="content">
+          <Switch>
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/create"> 
+            <Route path="/create">
               <Create />
             </Route>
           </Switch>
