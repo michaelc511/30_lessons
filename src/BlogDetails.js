@@ -3,12 +3,10 @@ import useFetch from './useFetch';
 
 const BlogDetails = () => {
   const { id } = useParams();
-  // 1. useFetch
   const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
 
   return (
     <div className="blog-details">
-      {/* 2. Conditional template */}
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {blog &&
