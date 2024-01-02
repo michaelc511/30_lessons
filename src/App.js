@@ -12,7 +12,7 @@ function App() {
   const person = { name: 'Yoshi', age: 30 }
   const link = 'http://www.google.com'
   return (
-    <Router>
+    <Router> 
       <div className='App'>
         <NavBar></NavBar>
         <div className="content">
