@@ -7,7 +7,7 @@ https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0
 
 https://github.com/iamshaunjp/Complete-React-Tutorial
 
-# Lessons based on branches
+# Lessons based on branches #_description, ex 2_create_react
 
   2 Create React App
 
@@ -70,6 +70,13 @@ https://github.com/iamshaunjp/Complete-React-Tutorial
   31 Deleting blogs
   
   32 404 pages
+
+  Bonus
+
+  33 Passing arrays as props https://react.dev/learn/passing-props-to-a-component 
+
+  34 Passing objects as props https://react.dev/learn/passing-props-to-a-component 
+
 
 # Getting Started with Create React App
 
