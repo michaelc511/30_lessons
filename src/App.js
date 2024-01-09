@@ -3,24 +3,35 @@ import './App.css';
 
 
 function App() {
-  let numbers = [1,2,3]
+  let person = {
+    'name': 'Larry',
+    'age' : 22
+  }
+
   return (
     <div className="App">
-      <Child name="Mike" numbers={numbers}/>
+      <Child person={person}/>
     </div>
   );
 }
 
-export function Child({name, numbers}) {
+// ex 1
+// export function Child({person}) {
+//   return (
+//   <div>
+//     <h1>Hi {person.name} you are {person.age} old.</h1>
+    
+
+//   </div>
+//   )
+// }
+
+// ex 2 using the obj name
+export function Child({person:{name, age}}) {
   return (
   <div>
-    <h1>Hi {name}</h1>
-    {/* loop through the numbers using map */}
-    {numbers.map((num) =>{
-      return(
-        <div key={num}>{num}</div>
-      );
-    })}
+    <h1>Hi {name} you are {age} old.</h1>
+    
 
   </div>
   )
