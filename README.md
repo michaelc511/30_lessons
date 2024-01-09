@@ -7,6 +7,40 @@ https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0
 
 https://github.com/iamshaunjp/Complete-React-Tutorial
 
+# Lessons based on branches
+
+2 Create React App
+3 Components and Templates
+4 Dynamic values in Templates
+5 Multiple components
+6 Adding styles
+7 Click events
+8 Using state - useState hook
+9 React Dev Tools
+10 Outputting lists
+11 Props
+12 Reusing components
+13 Functions as props 
+14 The useEffect hook
+15 The useEffect dependencies
+16 JSON Server
+17 Fetch data with useEffect
+18 Conditional loading message
+19 Handling fetch errors
+20 Making a custom hook
+21 React Router 
+22 Exact match routes
+23 Router links
+24 Cleanup useEffect
+25 Route parameters
+26 Reusing custom hooks
+27 Controlled inputs(form)
+28 Submit events
+29 Making a POST request
+30 Programic redirects 
+31 Deleting blogs
+32 404 pages
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
