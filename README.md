@@ -3,7 +3,7 @@ Net Ninja 30+ Lessons
   2: Youtube Playlist: Net Ninja Playlist of 30+ Lessons
       https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=bicZPDX0muVyhooc
   3: Blog Article
-  4: Git Branch per area or Codepen per area
+  4: Solution: Git Branch per area  
  
  
  Branch Format #_desc_desc
